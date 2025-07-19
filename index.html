@@ -9,7 +9,9 @@
       margin: 0;
       padding: 0;
       height: 100%;
-      background-color: #000;
+      background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e);
+      background-size: 600% 600%;
+      animation: gradientBG 15s ease infinite;
       color: #fff;
       font-family: 'Helvetica Neue', sans-serif;
       display: flex;
@@ -24,6 +26,23 @@
       font-size: 1rem;
       opacity: 0.5;
       margin-top: 10px;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @media (max-width: 600px) {
+      html, body {
+        font-size: 2rem;
+        padding: 1rem;
+      }
+
+      .hint {
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
